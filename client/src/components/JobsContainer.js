@@ -19,6 +19,7 @@ const JobsContainer = () => {
     sort,
     numOfPages,
     showAlert,
+    user
   } = useAppContext();
   useEffect(() => {
     getJobs();
@@ -44,7 +45,7 @@ const JobsContainer = () => {
       </h5>
       <div className='jobs'>
         {jobs.map((job) => {
-          return <Job key={job._id} {...job} />;
+          return <Job key={job._id} {...job} user={user} />;
         })}
       </div>
       {numOfPages > 1 && <PageBtnContainer />}

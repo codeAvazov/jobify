@@ -24,9 +24,9 @@ const getAllJobs = async (req, res) => {
   const queryObject = {
   };
 
-  if (!req.user.testUser) {
-    queryObject.createdBy = req.user.userId;
-  }
+  // if (!req.user.testUser) {
+  //   queryObject.createdBy = req.user.userId;
+  // }
 
   // add stuff based on condition
 

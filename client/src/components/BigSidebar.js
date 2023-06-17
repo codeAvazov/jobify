@@ -4,7 +4,7 @@ import Logo from '../components/Logo'
 import Wrapper from '../assets/wrappers/BigSidebar'
 
 const BigSidebar = () => {
-  const { showSidebar } = useAppContext()
+  const { showSidebar, user } = useAppContext()
   return (
     <Wrapper>
       <div
@@ -16,7 +16,7 @@ const BigSidebar = () => {
           <header>
             <Logo />
           </header>
-          <NavLinks />
+          <NavLinks user={user} />
         </div>
       </div>
     </Wrapper>
